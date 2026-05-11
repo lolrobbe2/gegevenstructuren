@@ -47,9 +47,15 @@ public class BinaryTree {
         }
         left = new BinaryTree();
         right = new BinaryTree();
-        boolean result = left.build(localQuestions, animalsYes, localAnswers);
-        boolean result2 = right.build(localQuestions, animalsNo, localAnswers);
-        return  result && result2;
+        boolean leftResult = left.build(localQuestions, animalsYes, localAnswers);
+        boolean rightResult = right.build(localQuestions, animalsNo, localAnswers);
+        if (!rightResult) {
+            right = null;
+        }
+        if (!leftResult) {
+            left = null;
+        }
+        return leftResult || rightResult;
     }
 
     public int height() {
@@ -59,40 +65,63 @@ public class BinaryTree {
     public double averageDepth() {
         return 0;
     }
+
     @Override
     public String toString() {
         return toString("");
     }
+
     private String toString(String indent) {
-        if(left.isLeafNode()  && right.isLeafNode()) {
-            if(right.value != null){
-                return right.value + "\n";
-            } else if(left.value != null){
-                return left.value + "\n";
-            } else {
+
+        String result = value + "\n";
+        if (left != null && right != null) {
+            String leftValue = left.toString(indent + "\t");
+            String rightValue = right.toString(indent + "\t");
+            if (leftValue.isEmpty() && rightValue.isEmpty())
                 return "";
+            if (!leftValue.isEmpty()) {
+                result += indent + "--N--> ";
+                result += leftValue;
             }
-        } else {
-            String result = "\t" + value + "\n";
-            if (left != null && right != null) {
-                String leftValue = left.toString(indent + "\t");
-                String rightValue = right.toString(indent + "\t");
-                if(leftValue.isEmpty() && rightValue.isEmpty())
-                    return "";
-                if(!leftValue.isEmpty()) {
-                    result += indent + "--N--> ";
-                    result += leftValue;
-                }
-                if(!rightValue.isEmpty()) {
-                    result += indent + "--Y--> ";
-                    result += rightValue;
-                }
+            if (!rightValue.isEmpty()) {
+                result += indent + "--Y--> ";
+                result += rightValue;
+            }
+            return result;
+        } else if (left != null) {
+            String leftValue = left.toString(indent + "\t");
+            if (!leftValue.isEmpty()) {
+                result += indent + "--N--> ";
+                result += leftValue;
+                return result;
+            }
+        } else if (right != null) {
+            String rightValue = right.toString(indent + "\t");
+            if (!rightValue.isEmpty()) {
+                result += indent + "--Y--> ";
+                result += rightValue;
                 return result;
             }
         }
-        return "";
+        return "\t" + value + "\n";
     }
-    boolean isLeafNode(){
+
+    boolean isLeafNode() {
         return left == null || right == null;
+    }
+
+    int getLeafCount() {
+        int leafCount = 0;
+        if (left == null && right == null) {
+            return 1;
+        }
+        if (left != null) {
+            leafCount += left.getLeafCount();
+        }
+        if (right != null) {
+            leafCount += right.getLeafCount();
+        }
+
+        return leafCount;
     }
 }

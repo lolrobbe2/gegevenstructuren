@@ -46,16 +46,15 @@ public class Main {
         List<String>animals = new ArrayList<>();
         List<Map<String, Boolean>> answers = new ArrayList<>();
         
-        readQuestions("animals_medium.txt", questions, animals, answers);
+        readQuestions("animals_large.txt", questions, animals, answers);
         
         System.out.println(questions);
         System.out.println(animals);
         BinaryTree tree = new BinaryTree();
         tree.build(questions,animals,answers);
-        for (Map<String, Boolean> a: answers){
-            System.out.println(a);
-        }
-        System.out.println(tree.toString());
+
+        System.out.println(tree);
+        System.out.println(tree.getLeafCount());
     }
 
 }
