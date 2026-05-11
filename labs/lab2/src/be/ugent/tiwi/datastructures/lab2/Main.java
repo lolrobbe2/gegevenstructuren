@@ -46,7 +46,7 @@ public class Main {
         List<String>animals = new ArrayList<>();
         List<Map<String, Boolean>> answers = new ArrayList<>();
         
-        readQuestions("animals_large.txt", questions, animals, answers);
+        readQuestions("animals_small.txt", questions, animals, answers);
         
         System.out.println(questions);
         System.out.println(animals);
@@ -55,6 +55,8 @@ public class Main {
 
         System.out.println(tree);
         System.out.println(tree.getLeafCount());
+        System.out.println(tree.getSplitCount());
+
     }
 
 }

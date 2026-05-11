@@ -73,37 +73,53 @@ public class BinaryTree {
 
     private String toString(String indent) {
 
-        String result = value + "\n";
-        if (left != null && right != null) {
+
+
+        if(right != null && left != null) {
+            String result = value + "\n";
+
             String leftValue = left.toString(indent + "\t");
-            String rightValue = right.toString(indent + "\t");
-            if (leftValue.isEmpty() && rightValue.isEmpty())
-                return "";
             if (!leftValue.isEmpty()) {
                 result += indent + "--N--> ";
                 result += leftValue;
+            } else {
+                result += indent + "--N--> ";
+                result += left.value + "\n";
             }
+
+            String rightValue = right.toString(indent + "\t");
             if (!rightValue.isEmpty()) {
                 result += indent + "--Y--> ";
                 result += rightValue;
+            } else {
+                result += indent + "--Y--> ";
+                result += right.value + "\n";
             }
             return result;
-        } else if (left != null) {
+        }
+        if(left != null ) {
+            String result = value + "\n";
             String leftValue = left.toString(indent + "\t");
             if (!leftValue.isEmpty()) {
-                result += indent + "--N--> ";
+                result += indent + "--Y--> ";
                 result += leftValue;
                 return result;
+            } else {
+                return "\t" + left.value + "\n";
             }
-        } else if (right != null) {
+        }
+        if(right != null ) {
+            String result = value + "\n";
             String rightValue = right.toString(indent + "\t");
             if (!rightValue.isEmpty()) {
                 result += indent + "--Y--> ";
                 result += rightValue;
                 return result;
+            } else {
+                return "\t" + right.value + "\n";
             }
         }
-        return "\t" + value + "\n";
+        return "";
     }
 
     boolean isLeafNode() {
@@ -123,5 +139,19 @@ public class BinaryTree {
         }
 
         return leafCount;
+    }
+    int getSplitCount() {
+        int splitCount = 0;
+        if (left != null && right != null) {
+            splitCount = 1;
+        }
+        if (left != null) {
+            splitCount += left.getSplitCount();
+        }
+        if (right != null) {
+            splitCount += right.getSplitCount();
+        }
+
+        return splitCount;
     }
 }
