@@ -64,15 +64,29 @@ public class BinaryTree {
         return toString("");
     }
     private String toString(String indent) {
-        if(left.isLeafNode() && right.isLeafNode()) {
-            return (right.value != null ? right.value : left.value) + "\n";
+        if(left.isLeafNode()  && right.isLeafNode()) {
+            if(right.value != null){
+                return right.value + "\n";
+            } else if(left.value != null){
+                return left.value + "\n";
+            } else {
+                return "";
+            }
         } else {
-            String result = indent + value + "\n";
+            String result = "\t" + value + "\n";
             if (left != null && right != null) {
-                result += indent + "--N--> ";
-                result += left.toString(indent + "\t");
-                result += indent + "--Y--> ";
-                result += right.toString(indent + "\t");
+                String leftValue = left.toString(indent + "\t");
+                String rightValue = right.toString(indent + "\t");
+                if(leftValue.isEmpty() && rightValue.isEmpty())
+                    return "";
+                if(!leftValue.isEmpty()) {
+                    result += indent + "--N--> ";
+                    result += leftValue;
+                }
+                if(!rightValue.isEmpty()) {
+                    result += indent + "--Y--> ";
+                    result += rightValue;
+                }
                 return result;
             }
         }
