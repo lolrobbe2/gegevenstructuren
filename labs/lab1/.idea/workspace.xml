@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3955c3c2-0a62-4f41-8ba6-6a404e2e9d07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-eda/eda.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lab-eda/eda.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1_startcode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SkipList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SkipListLane$LayerNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SkipListLane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SortedLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SortedLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SortedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1_startcode/be/ugent/tiwi/datastructures/lab1/SortedListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/SkipList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/SkipListLane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/SortedLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/SortedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/ugent/tiwi/datastructures/lab1/SortedListTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3CoOVKk9pRszhf9OVNMkVzTJsHz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3955c3c2-0a62-4f41-8ba6-6a404e2e9d07" name="Changes" comment="" />
+      <created>1777048481369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777048481369</updated>
+    </task>
+    <servers />
+  </component>
+</project>
